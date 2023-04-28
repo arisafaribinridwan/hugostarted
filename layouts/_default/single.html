@@ -3,7 +3,8 @@
   <div class="row">
     <div class="col">
       <h1>{{ .Site.Title }}</h1>
-      <h2 class="text-white h3 bg-success">{{ .Params.subtitle }}</h2>
+      {{ with .Params.subtitle }}
+      <h2 class="text-white h3 bg-success">{{ . }} {{ end }}</h2>
       {{ .Content }}
     </div>
   </div>
