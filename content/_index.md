@@ -2,6 +2,7 @@
 title: "Home"
 date: 2023-04-28T08:56:22+07:00
 draft: false
+subtitle: Tampilan Muka Web Site ini
 ---
 
 Hugo support Markdown, which enables you to do many things include **bold**, *italic* and these example below.
