@@ -22,3 +22,5 @@ Hugo support Markdown, which enables you to do many things include **bold**, _it
 ## Link
 
 [Google](www.google.com)
+
+<a class="btn btn-primary" href="#" role="button">Link</a>
