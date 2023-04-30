@@ -1,7 +1,21 @@
 <div class="container-fluid bg-secondary">
   <div class="row">
     <div class="col p-2">
-      <span class="fs-5 text-light">Page Footer</span>
+      {{ with .Site.Params.Footer }} {{ . }} {{ else }}
+      <span class="fs-5 text-light">
+        &copy; <span id="js-Year"></span>
+        <noscript>{{ .PublishDate.Format "2006" }}</noscript> - {{
+        .Site.Copyright | default .Site.Title }}
+      </span>
+      {{ end }}
+      <!-- <p>{{ .Site.Params.Footer }}</p> -->
     </div>
   </div>
 </div>
+
+<script>
+  const date = new Date();
+  const Year = document.getElementById("js-Year");
+  Year.innerHTML = date.getFullYear();
+  // document.getElementById("js-Year").innerHTML = new Date().getFullYear();
+</script>
